@@ -9,7 +9,7 @@ bot.on("ready", function() {
 
 bot.on("message", function(message) {
    if(message.content === "ping") {
-       message.reply("Pong!");
+       message.channel.sendMessage("Pong!");
    } 
    if(message.content === "Bonjour") {
     message.reply("Coucou!");
