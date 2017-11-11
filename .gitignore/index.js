@@ -23,8 +23,8 @@ bot.on("message", function(message) {
 
 bot.on("message", function(message) {
     if(message.author.equals(bot.user)) return;
-    if(!message.content.substring(PREFIX.length).split(" "));
-
+    if (!message.content.startsWith(PREFIX)) return;
+    
     var args = message.content.substring(PREFIX.length).split (" ");
 
     switch (args[0].toLowerCase()) {
