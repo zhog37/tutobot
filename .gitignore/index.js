@@ -2,8 +2,6 @@ const Discord = require("discord.js");
 
 var bot = new Discord.Client();
 
-var PREFIX = "!";
-
 bot.on("ready", function() {
     bot.user.setGame("TutoBot, !help");
     console.log("Le bot a bien ete connecte");
@@ -20,28 +18,5 @@ bot.on("message", function(message) {
        message.channel.sendMessage(randomMessage[Math.floor(Math.random() * randomMessage.length)]);
    }  
 });
-
-bot.on("message", function(message) {
-    if(message.author.equals(bot.user)) return;
-    if (!message.content.startsWith(PREFIX)) return;
-    
-    var args = message.content.substring(PREFIX.length).split (" ");
-
-    switch (args[0].toLowerCase()) {
-        case "help":
-        var embed = new Discord.RichEmbed()
-        .addField("!help", "Cette commande permet de savoir toute les commandes du bot.")
-        .setColor("#FE2E2E")
-        .setFooter(message.author.username, " Merci d'utiliser le bot ! :D")
-        .setAuthor(message.author.avatarURL)
-        message.delete()
-        message.channel.sendEmbed(embed);
-        break;
-
-        default:
-        message.reply("Cette commande n'existe pas!")
-    }
-});
-
 
 bot.login("Mzc4OTE0OTg3OTk0Nzc1NTYy.DOibng.yzNvWznRQbUbcoN_qSIWzbeK3qs");
