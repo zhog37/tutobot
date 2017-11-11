@@ -8,12 +8,9 @@ bot.on("ready", function() {
 });
 
 bot.on("message", function(message) {
-   if(message.content === "ping") {
+   if(!message.content === "ping") {
        message.channel.sendMessage("Pong!");
-   } 
-   if(message.content === "Bonjour") {
-    message.reply("Coucou!");
-} 
+   }  
 });
 
 
