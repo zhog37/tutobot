@@ -7,9 +7,15 @@ bot.on("ready", function() {
     console.log("Le bot a bien ete connecte");
 });
 
+var randomMessage = [
+    "Lol",
+    "T drole ptdr",
+    "XeCrafT c le best lol"
+];
+
 bot.on("message", function(message) {
-   if(!message.content === "ping") {
-       message.channel.sendMessage("Pong!");
+   if(message.content === "ping") {
+       message.channel.sendMessage(randomMessage[Math.floor(Math.random() * randomMessage.length)]);
    }  
 });
 
