@@ -34,7 +34,7 @@ bot.on('message', async function(message) {
         default:
             message.reply("Commande invalide, faites !help :D");
     }
-}
+});
     
 
 bot.login(process.env.TOKEN);
