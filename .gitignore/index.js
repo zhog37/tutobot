@@ -13,7 +13,7 @@ bot.on('message', function(message) {
      message.reply('Pong ! ' + bot.ping + ' !')  
     }
     
-};
+});
     
 
 bot.login(process.env.TOKEN);
