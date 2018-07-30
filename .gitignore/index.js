@@ -18,8 +18,23 @@ bot.on("message", async function(message) {
 
     switch(args[0].toLowerCase()) {
         case "invite":
-        message.channel.send("Test");
+        message.channel.send("", {
+            embed: {
+                color: 0xFF0000,
+                author: message.author.name,
+                title: '',
+                fields: [{
+                    name: "Lien d'invitation discord",
+                    value: "https://discord.gg/CsH3kj",
+                    inline: false
+                }],
+                footer: {
+                    footer: "Partager ce lien à tous vos amis !",
+                },
+            }
+        });
         break;
     }
 });
+
 bot.login(process.env.TOKEN);
