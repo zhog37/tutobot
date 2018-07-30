@@ -10,7 +10,7 @@ bot.on("ready", function() {
 });
 
 bot.on("message", async function(message) {
-    if (message.author.equal(bot.user)) return;
+    if (message.author.equals(bot.user)) return;
 
     if(!message.content.startsWith(PREFIX)) return;
 
