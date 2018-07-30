@@ -21,5 +21,5 @@ bot.on("message", async function(message) {
         message.channel.send("Test");
         break;
     }
-})
+});
 bot.login(process.env.TOKEN);
